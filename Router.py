@@ -37,7 +37,7 @@ control_agent = create_react_agent(
 
 control_agent_executor = AgentExecutor(agent=control_agent, tools=tools, verbose=True)
 
-input_query = "개발자들이 애용하는 기술스택 알려줘"
+input_query = "개발자들은 무슨 음식을 좋아해?"
 
 res = control_agent_executor.invoke(input={"input": input_query})
 

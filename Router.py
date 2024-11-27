@@ -17,7 +17,7 @@ tools = [
     Tool(
         name="Python Agent",
         func=python_agent_executor_wrapper,
-        description="자연어를 파이썬 코드로 변환하고 실행하여 코드 실행결과를 반환할 때 유용해.  입력으로 코드를 받지 않아."
+        description="파이썬 코드를 작성할 때 유용한 도구입니다. 입력으로 코드를 제공하지 않아도 작동합니다."
     ),
     Tool(
         name="CSV Agent",
@@ -37,7 +37,7 @@ control_agent = create_react_agent(
 
 control_agent_executor = AgentExecutor(agent=control_agent, tools=tools, verbose=True)
 
-input_query = "개발자들은 무슨 음식을 좋아해?"
+input_query = "개발자들 기술스택 알려줘"
 
 res = control_agent_executor.invoke(input={"input": input_query})
 

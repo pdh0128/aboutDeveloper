@@ -8,7 +8,7 @@ llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
 
 def csv_agent_executor(input):
-    csv_agent = create_csv_agent(llm=llm, path="/Users/pdh/Desktop/프로젝트/코드인터프리터/survey_results_public.csv", verbose=True, allow_dangerous_code=True, prefix="출력은 항상 한글로 해줘")
+    csv_agent = create_csv_agent(llm=llm, path="/Users/pdh/Desktop/프로젝트/개발자에관하여/survey_results_public.csv", verbose=True, allow_dangerous_code=True, prefix="출력은 항상 한글로 해줘")
 
     FORMAT_INSTRUCTIONS = """Use the following format:
 

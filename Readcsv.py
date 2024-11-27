@@ -2,6 +2,10 @@ from langchain_experimental.agents import create_csv_agent
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 
+from langchain.globals import set_llm_cache
+from langchain.cache import InMemoryCache
+set_llm_cache(InMemoryCache())
+
 load_dotenv()
 
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
